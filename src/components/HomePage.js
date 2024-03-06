@@ -5,6 +5,8 @@ const HomePage = () => {
   return (
     <div>
       <Link to="/login">Login</Link>
+      <br />
+      <Link to="/registration">Registration</Link>
     </div>
   );
 };

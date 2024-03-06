@@ -1,17 +1,14 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const LoginForm = () => {
-  const navigate = useNavigate();
-
+const RegistarForm = () => {
+  const nav = useNavigate();
   const handleHomeClick = () => {
-    navigate("/");
+    nav("/");
   };
-
   return (
     <div>
-      <form>
-        <h2>Ulogujte se</h2>
+      <form action="/login">
+        <h2>Registracija</h2>
         Ime:
         <br />
         <input required="true" type="text" name="ime"></input>
@@ -20,15 +17,19 @@ const LoginForm = () => {
         <br />
         <input required="true" type="text" name="prezime"></input>
         <br />
+        E-mail:
+        <br />
+        <input required="true" type="email" name="email"></input>
+        <br />
         Lozinka:
         <br />
         <input required="true" type="password" name="lozinka"></input>
         <br />
-        <input type="submit" name="posalji" value="posalji"></input>
+        <input type="submit" value="posalji"></input>
         <button onClick={handleHomeClick}>Home</button>
       </form>
     </div>
   );
 };
 
-export default LoginForm;
+export default RegistarForm;
