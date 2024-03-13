@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import StudentList from "./StudentList";
 
 const AddStudentForm = () => {
   const nav = useNavigate();
+  const [students, setStudents] = useState([]);
   const [studentData, setStudentData] = useState({
     firstName: "",
     lastName: "",
@@ -38,10 +40,25 @@ const AddStudentForm = () => {
       return;
     }
     // Kreiranje novog studenta
-    const newStudentId = studentData.studentIndex;
+    // const newStudentId = studentData.studentIndex;
     // Preusmjeravanje korisnika na URL /success/studentId
-    nav(`/success/${newStudentId}`);
+    //nav(`/success/${newStudentId}`);
+    // Kreiranje novog studenta
+    const newStudent = { ...studentData }; // Kreiramo novi objekat sa informacijama o studentu
+    console.log("Novi student: ", newStudent);
+    setStudents([...students, newStudent]); // Dodajemo novog studenta u listu
+    //console.log("Lista: ", students);
+    setStudentData({
+      // Resetujemo stanje za unos novog studenta
+      firstName: "",
+      lastName: "",
+      studentIndex: "",
+      faculty: "",
+    });
+    // Preusmeravanje korisnika na novu stranicu koja prikazuje sve dodate studente
+    nav("/students");
   };
+  //};
 
   return (
     <div>

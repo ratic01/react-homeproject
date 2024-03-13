@@ -7,9 +7,12 @@ import HomePage from "./components/HomePage";
 import RegistarForm from "./components/RegistarForm";
 import AddStudentForm from "./components/AddStudentForm";
 import Counter from "./components/Counter";
+import StudentList from "./components/StudentList";
 import reportWebVitals from "./reportWebVitals";
+import { createRoot } from "react-dom/client";
+const students = [];
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
@@ -17,11 +20,14 @@ ReactDOM.render(
         <Route path="/login" element={<LoginForm />} />
         <Route path="/registration" element={<RegistarForm />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
-        <Route path="/AddStudentForm" element={<AddStudentForm />}></Route>
+        <Route path="/addstudentform" element={<AddStudentForm />}></Route>
+        <Route
+          path="/students"
+          element={<StudentList students={students} />}
+        ></Route>
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 reportWebVitals();
