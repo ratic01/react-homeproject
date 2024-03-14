@@ -8,6 +8,8 @@ import RegistarForm from "./components/RegistarForm";
 import AddStudentForm from "./components/AddStudentForm";
 import Counter from "./components/Counter";
 import StudentList from "./components/StudentList";
+import Home from "./components/Home";
+import Users from "./components/Users";
 import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
 const students = [];
@@ -21,6 +23,9 @@ createRoot(document.getElementById("root")).render(
         <Route path="/registration" element={<RegistarForm />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/addstudentform" element={<AddStudentForm />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/users" element={<Users />}></Route>
+
         <Route
           path="/students"
           element={<StudentList students={students} />}
