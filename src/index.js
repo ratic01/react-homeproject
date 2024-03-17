@@ -10,10 +10,16 @@ import Counter from "./components/Counter";
 import StudentList from "./components/StudentList";
 import Home from "./components/Home";
 import Users from "./components/Users";
+import UserProfile from "./components/UserProfile";
 import Contact1 from "./components/Contact";
 import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
 const students = [];
+const userData = {
+  username: "john_doe",
+  email: "john1234@gmail.com",
+  age: 30,
+};
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,6 +37,10 @@ createRoot(document.getElementById("root")).render(
           element={
             <Contact1 name="John" lastname="Doe" email="john1234@gmail.com" />
           }
+        ></Route>
+        <Route
+          path="/user-profile"
+          element={<UserProfile userData={userData} />}
         ></Route>
 
         <Route

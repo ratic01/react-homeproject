@@ -9,6 +9,8 @@ const HomePage = () => {
       <Link to="/registration">Registration</Link>
       <br />
       <Link to="/contact">Contact us</Link>
+      <br />
+      <Link to="/user-profile">User-profile</Link>
     </div>
   );
 };
