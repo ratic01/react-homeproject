@@ -1,0 +1,28 @@
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:14px solid #a0bbce;
+    border-radius: 18px;
+    padding: 20px;
+    width: fit-content;
+    margin: 150px auto;
+    background-color: rgb(185, 194, 207);
+
+}
+
+.menu-item{
+    margin: 10px 0;
+    
+    padding: 8px 16px;
+    background-color:#f0f0f0 ;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #1b1081;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover{
+    background-color:#829fb9;
+}
