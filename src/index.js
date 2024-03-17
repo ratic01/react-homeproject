@@ -10,6 +10,7 @@ import Counter from "./components/Counter";
 import StudentList from "./components/StudentList";
 import Home from "./components/Home";
 import Users from "./components/Users";
+import Contact1 from "./components/Contact";
 import reportWebVitals from "./reportWebVitals";
 import { createRoot } from "react-dom/client";
 const students = [];
@@ -25,6 +26,12 @@ createRoot(document.getElementById("root")).render(
         <Route path="/addstudentform" element={<AddStudentForm />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/users" element={<Users />}></Route>
+        <Route
+          path="/contact"
+          element={
+            <Contact1 name="John" lastname="Doe" email="john1234@gmail.com" />
+          }
+        ></Route>
 
         <Route
           path="/students"

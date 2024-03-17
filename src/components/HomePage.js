@@ -7,6 +7,8 @@ const HomePage = () => {
       <Link to="/login">Login</Link>
       <br />
       <Link to="/registration">Registration</Link>
+      <br />
+      <Link to="/contact">Contact us</Link>
     </div>
   );
 };
